@@ -8,13 +8,19 @@
 
 #import "ODLAppDelegate.h"
 
+#import "ODLMasterViewController.h"
+
 @implementation ODLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Theming
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ODLMasterViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

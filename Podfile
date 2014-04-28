@@ -7,6 +7,7 @@ pod "ReactiveViewModel"
 pod "libextobjc"
 pod "DANReactiveLocationManager"
 pod "DANAdditions", :git => "https://github.com/DanielTomlinson/DANAdditions.git"
+pod "UIView+AutoLayout"
 
 target "Lab FinderTests", :exclusive => true do
   pod 'Kiwi/XCTest'

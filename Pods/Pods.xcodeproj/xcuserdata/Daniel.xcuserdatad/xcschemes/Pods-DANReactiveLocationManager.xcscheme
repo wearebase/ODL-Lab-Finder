@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "32C1FBC43A39415D96AACE79"
+               BlueprintIdentifier = "57FD4BDCA7014C0289E41164"
                BuildableName = "libPods-DANReactiveLocationManager.a"
                BlueprintName = "Pods-DANReactiveLocationManager"
                ReferencedContainer = "container:Pods.xcodeproj">

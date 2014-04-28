@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_ReactiveViewModel 2
 #define COCOAPODS_VERSION_PATCH_ReactiveViewModel 0
 
+// UIView+AutoLayout
+#define COCOAPODS_POD_AVAILABLE_UIView_AutoLayout
+#define COCOAPODS_VERSION_MAJOR_UIView_AutoLayout 1
+#define COCOAPODS_VERSION_MINOR_UIView_AutoLayout 3
+#define COCOAPODS_VERSION_PATCH_UIView_AutoLayout 0
+
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc
 #define COCOAPODS_VERSION_MAJOR_libextobjc 0

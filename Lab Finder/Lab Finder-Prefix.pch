@@ -13,4 +13,14 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
+
+    // ReactiveCocoa
+    #import <ReactiveCocoa/ReactiveCocoa.h>
+
+    // Utilities
+    #import <libextobjc/extobjc.h>
+
+    // DANAdditions
+    #import <DANAdditions/DANAdditions.h>
 #endif
