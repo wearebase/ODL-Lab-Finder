@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_DANAdditions 0
 #define COCOAPODS_VERSION_PATCH_DANAdditions 0
 
-// DANReactiveLocationManager
-#define COCOAPODS_POD_AVAILABLE_DANReactiveLocationManager
-#define COCOAPODS_VERSION_MAJOR_DANReactiveLocationManager 1
-#define COCOAPODS_VERSION_MINOR_DANReactiveLocationManager 0
-#define COCOAPODS_VERSION_PATCH_DANReactiveLocationManager 0
-
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
@@ -41,12 +35,6 @@
 #define COCOAPODS_VERSION_MAJOR_ReactiveViewModel 0
 #define COCOAPODS_VERSION_MINOR_ReactiveViewModel 2
 #define COCOAPODS_VERSION_PATCH_ReactiveViewModel 0
-
-// UIView+AutoLayout
-#define COCOAPODS_POD_AVAILABLE_UIView_AutoLayout
-#define COCOAPODS_VERSION_MAJOR_UIView_AutoLayout 1
-#define COCOAPODS_VERSION_MINOR_UIView_AutoLayout 3
-#define COCOAPODS_VERSION_PATCH_UIView_AutoLayout 0
 
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc

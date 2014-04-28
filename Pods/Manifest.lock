@@ -1,7 +1,5 @@
 PODS:
   - DANAdditions (1.0.0)
-  - DANReactiveLocationManager (1.0.0):
-    - ReactiveCocoa
   - Kiwi/ARC (2.2.4)
   - Kiwi/NonARC (2.2.4)
   - Kiwi/XCTest (2.2.4):
@@ -50,16 +48,13 @@ PODS:
   - ReactiveCocoa/no-arc (2.3)
   - ReactiveViewModel (0.2):
     - ReactiveCocoa (~> 2.1)
-  - UIView+AutoLayout (1.3.0)
 
 DEPENDENCIES:
   - DANAdditions (from `https://github.com/DanielTomlinson/DANAdditions.git`)
-  - DANReactiveLocationManager
   - Kiwi/XCTest
   - libextobjc
   - ReactiveCocoa
   - ReactiveViewModel
-  - UIView+AutoLayout
 
 EXTERNAL SOURCES:
   DANAdditions:
@@ -67,11 +62,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DANAdditions: 6d12ab0867a32678698dd935aebf565a24792b75
-  DANReactiveLocationManager: 8679beaf91735834ecff9ffe1efcad3d7e5fb45d
   Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
   libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
   ReactiveCocoa: 1f6265f9d521923d3efcc37b00722cefc16df269
   ReactiveViewModel: f636ab3e06b5e69664b69c883fcdb457ab5cb0cb
-  UIView+AutoLayout: 43373a18797954fd8ee3b1423af364f1b80a2af8
 
 COCOAPODS: 0.32.1

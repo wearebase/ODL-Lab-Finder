@@ -10,8 +10,6 @@
 #import "ODLDetailViewModel.h"
 #import "ODLAddressTableViewCell.h"
 
-#import <UIView+AutoLayout/UIView+AutoLayout.h>
-
 @interface ODLDetailViewController ()
 @property (strong, nonatomic, readonly) ODLDetailViewModel *viewModel;
 @end

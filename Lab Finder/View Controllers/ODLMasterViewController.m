@@ -10,7 +10,6 @@
 #import "ODLMasterViewModel.h"
 #import "ODLDetailViewController.h"
 #import "ODLDetailViewModel.h"
-#import <UIView+AutoLayout/UIView+AutoLayout.h>
 
 @interface ODLMasterViewController ()
 @property (weak, nonatomic) UITableView *tableView;
