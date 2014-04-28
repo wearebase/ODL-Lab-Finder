@@ -16,5 +16,5 @@
 
 @property (nonatomic, readonly) NSString *titleFormattedName;
 @property (nonatomic, readonly) NSString *titleFormattedLocation;
-
+@property (nonatomic, readonly) NSString *formattedAddress;
 @end

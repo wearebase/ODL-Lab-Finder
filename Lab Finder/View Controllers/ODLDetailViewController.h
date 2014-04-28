@@ -10,7 +10,7 @@
 
 @class ODLDetailViewModel;
 
-@interface ODLDetailViewController : UIViewController
+@interface ODLDetailViewController : UITableViewController
 
 - (instancetype)initWithViewModel:(ODLDetailViewModel *)viewModel;
 

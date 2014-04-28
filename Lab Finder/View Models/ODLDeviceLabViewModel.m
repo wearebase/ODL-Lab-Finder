@@ -23,8 +23,14 @@
         _model = model;
         
         RAC(self, titleFormattedName, @"") = RACObserve(self.model, name);
-        RAC(self, titleFormattedLocation, @"") = [RACObserve(self.model, location) map:^id(NSDictionary *location) {
+        
+        RACSignal *locationSignal = RACObserve(self.model, location);
+        RAC(self, titleFormattedLocation, @"") = [locationSignal map:^id(NSDictionary *location) {
             return location[@"city"];
+        }];
+        
+        RAC(self, formattedAddress, @"") = [locationSignal map:^id(NSDictionary *location) {
+            return [NSString stringWithFormat:@"%@,\n%@,\n%@,\n%@", location[@"street_adress"], location[@"city"], location[@"zip"], location[@"country"]];
         }];
     }
     

@@ -28,6 +28,8 @@
 		6533410E190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6533410C190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib */; };
 		65334112190E786A005707F5 /* ODLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65334111190E786A005707F5 /* ODLDetailViewController.m */; };
 		65334115190E78D3005707F5 /* ODLDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65334114190E78D3005707F5 /* ODLDetailViewModel.m */; };
+		65334119190E8048005707F5 /* ODLAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65334117190E8048005707F5 /* ODLAddressTableViewCell.m */; };
+		6533411A190E8048005707F5 /* ODLAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65334118190E8048005707F5 /* ODLAddressTableViewCell.xib */; };
 		71765A189E824DAEBEBAC94A /* libPods-Lab FinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */; };
 		D8BAC35C3AC74EE69CAEB4D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994388EA4664489AD1108D2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,9 @@
 		65334111190E786A005707F5 /* ODLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLDetailViewController.m; sourceTree = "<group>"; };
 		65334113190E78D3005707F5 /* ODLDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLDetailViewModel.h; sourceTree = "<group>"; };
 		65334114190E78D3005707F5 /* ODLDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLDetailViewModel.m; sourceTree = "<group>"; };
+		65334116190E8048005707F5 /* ODLAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLAddressTableViewCell.h; sourceTree = "<group>"; };
+		65334117190E8048005707F5 /* ODLAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLAddressTableViewCell.m; sourceTree = "<group>"; };
+		65334118190E8048005707F5 /* ODLAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ODLAddressTableViewCell.xib; sourceTree = "<group>"; };
 		BEC05017DDA34EA8AB17239D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lab FinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -242,6 +247,9 @@
 				6533410A190E73F2005707F5 /* ODLDeviceLabTableViewCell.h */,
 				6533410B190E73F2005707F5 /* ODLDeviceLabTableViewCell.m */,
 				6533410C190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib */,
+				65334116190E8048005707F5 /* ODLAddressTableViewCell.h */,
+				65334117190E8048005707F5 /* ODLAddressTableViewCell.m */,
+				65334118190E8048005707F5 /* ODLAddressTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6533411A190E8048005707F5 /* ODLAddressTableViewCell.xib in Resources */,
 				653340D1190E53D1005707F5 /* InfoPlist.strings in Resources */,
 				653340D9190E53D1005707F5 /* Images.xcassets in Resources */,
 				6533410E190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib in Resources */,
@@ -426,6 +435,7 @@
 				653340FD190E5690005707F5 /* ODLMasterViewController.m in Sources */,
 				65334100190E5926005707F5 /* ODLMasterViewModel.m in Sources */,
 				65334112190E786A005707F5 /* ODLDetailViewController.m in Sources */,
+				65334119190E8048005707F5 /* ODLAddressTableViewCell.m in Sources */,
 				65334107190E6143005707F5 /* ODLNetworkManager.m in Sources */,
 				653340FA190E5641005707F5 /* ODLDeviceLab.m in Sources */,
 				6533410D190E73F2005707F5 /* ODLDeviceLabTableViewCell.m in Sources */,
