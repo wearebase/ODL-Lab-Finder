@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) RACSubject *updatedContentSignal;
 @property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) ODLNetworkManager *networkManager;
 
 @end
 
@@ -27,7 +28,8 @@
     self = [super init];
     if (self)
     {
-        self.updatedContentSignal = [[RACSubject subject] setNameWithFormat:@"ODLMasterViewModel updatedContentSignal"];
+        _updatedContentSignal = [[RACSubject subject] setNameWithFormat:@"ODLMasterViewModel updatedContentSignal"];
+        _networkManager = [[ODLNetworkManager alloc] init];
         
         [RACObserve(self, data) subscribeNext:^(id x) {
             [(RACSubject *)self.updatedContentSignal sendNext:nil];
@@ -40,14 +42,18 @@
 #pragma mark - Content
 - (void)updateContent
 {
-    RAC(self, data) = [self fetchAllDeviceLabs];
+    @weakify(self);
+    [[self fetchAllDeviceLabs] subscribeNext:^(id x) {
+        @strongify(self);
+        self.data = x;
+    }];
 }
 
 #pragma mark - Network
 
 - (RACSignal *)fetchAllDeviceLabs
 {
-    return [ODLNetworkManager fetchAllDeviceLabs];
+    return [[self.networkManager fetchAllDeviceLabs] takeUntil:self.rac_willDeallocSignal];
 }
 
 @end

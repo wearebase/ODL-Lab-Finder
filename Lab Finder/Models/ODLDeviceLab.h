@@ -12,4 +12,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 + (instancetype)deviceLabWithDictionary:(NSDictionary *)dictionary;
+
++ (NSArray *)labsWithArray:(NSArray *)array;
+
 @end

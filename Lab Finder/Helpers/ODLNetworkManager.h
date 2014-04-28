@@ -10,6 +10,6 @@
 
 @interface ODLNetworkManager : NSObject
 
-+ (RACSignal *)fetchAllDeviceLabs;
+- (RACSignal *)fetchAllDeviceLabs;
 
 @end

@@ -11,42 +11,45 @@
 
 @implementation ODLNetworkManager
 
-+ (RACSignal *)fetchAllDeviceLabs
+- (RACSignal *)fetchJSONFromURL:(NSURL *)url
 {
-    RACSignal *deviceLabSignal;
-    
-    NSLog(@"Hi?");
-    
-    deviceLabSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber)
-                       {
-                           NSLog(@"Yep");
-                           [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"http://api.opendevicelab.com"]
-                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                           NSLog(@"Somethings happening.");
-                                                           if (error)
-                                                           {
-                                                               NSLog(@"%@", [error localizedDescription]);
-                                                               [subscriber sendError:error];
-                                                           }
-                                                           else
-                                                           {
-                                                               NSLog(@"Hi");
-                                                               NSArray *results = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                                  options:0
-                                                                                                                    error:nil];
-                                                               NSArray *mappedResults = [[[results rac_sequence] map:^id(id value) {
-                                                                   return [ODLDeviceLab deviceLabWithDictionary:value];
-                                                               }] array];
-                                                               
-                                                               [subscriber sendNext:mappedResults];
-                                                           }
-                                                           [subscriber sendCompleted];
-                                                       }] resume];
-                           return nil;
-                       }];
-    
-    
-    return deviceLabSignal;
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url
+                                                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            if (! error)
+            {
+                NSError *jsonError = nil;
+                id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+                if (! jsonError)
+                {
+                    [subscriber sendNext:json];
+                }
+                else
+                {
+                    [subscriber sendError:jsonError];
+                }
+            }
+            else
+            {
+                [subscriber sendError:error];
+            }
+            
+            [subscriber sendCompleted];
+        }];
+        
+        [dataTask resume];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [dataTask cancel];
+        }];
+    }];
+}
+
+- (RACSignal *)fetchAllDeviceLabs
+{
+    return [[self fetchJSONFromURL:[NSURL URLWithString:@"http://api.opendevicelab.com"]] map:^id(NSArray *value) {
+        return [ODLDeviceLab labsWithArray:value];
+    }];
 }
 
 @end

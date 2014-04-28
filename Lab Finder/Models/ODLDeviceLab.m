@@ -37,4 +37,14 @@
     return self;
 }
 
++ (NSArray *)labsWithArray:(NSArray *)array
+{
+    NSArray *labs = [[[array rac_sequence] map:^id(id value)
+    {
+        return [self deviceLabWithDictionary:value];
+    }] array];
+    
+    return labs;
+}
+
 @end
