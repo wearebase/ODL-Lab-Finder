@@ -22,6 +22,7 @@
     if (self)
     {
         _viewModel = viewModel;
+        RAC(self, title, @"Device Lab") = RACObserve(self.viewModel, title);
     }
     
     return self;

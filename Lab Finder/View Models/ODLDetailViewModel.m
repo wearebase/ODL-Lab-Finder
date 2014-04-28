@@ -7,9 +7,10 @@
 //
 
 #import "ODLDetailViewModel.h"
+#import "ODLDeviceLabViewModel.h"
 
 @interface ODLDetailViewModel ()
-
+@property (strong, nonatomic) ODLDeviceLabViewModel *deviceLabViewModel;
 @end
 
 @implementation ODLDetailViewModel
@@ -19,10 +20,17 @@
     self = [super init];
     if (self)
     {
-        
+        _deviceLabViewModel = viewModel;
     }
     
     return self;
+}
+
+#pragma mark - Accessors
+
+- (NSString *)title
+{
+    return self.deviceLabViewModel.titleFormattedName;
 }
 
 @end

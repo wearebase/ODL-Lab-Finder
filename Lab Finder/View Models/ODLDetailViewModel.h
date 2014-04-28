@@ -12,7 +12,6 @@
 
 @interface ODLDetailViewModel : RVMViewModel
 
-
 @property (strong, nonatomic, readonly) NSString *title;
 
 - (instancetype)initWithDeviceLabViewModel:(ODLDeviceLabViewModel *)viewModel;
