@@ -12,6 +12,8 @@
 
 #import "ODLNetworkManager.h"
 
+#import "ODLDeviceLab.h"
+
 @interface ODLMasterViewModel ()
 
 @property (strong, nonatomic) RACSubject *updatedContentSignal;
@@ -45,7 +47,25 @@
     @weakify(self);
     [[self fetchAllDeviceLabs] subscribeNext:^(id x) {
         @strongify(self);
-        self.data = [[[x rac_sequence] map:^id(id value) {
+        
+        // Sort the array by number of devices, then filter the array to only show labs with devices, and map that to a view model.
+        
+        self.data = [[[[[x sortedArrayUsingComparator:^NSComparisonResult(ODLDeviceLab *lab1, ODLDeviceLab *lab2) {
+            if (lab1.numberOfDevices > lab2.numberOfDevices)
+            {
+                return NSOrderedAscending;
+            }
+            else if (lab1.numberOfDevices < lab2.numberOfDevices)
+            {
+                return NSOrderedDescending;
+            }
+            else
+            {
+                return NSOrderedSame;
+            }
+        }] rac_sequence] filter:^BOOL(ODLDeviceLab *lab) {
+            return (lab.numberOfDevices.integerValue > 0);
+        }] map:^id(id value) {
             return [[ODLDeviceLabViewModel alloc] initWithModel:value];
         }] array];
     }];

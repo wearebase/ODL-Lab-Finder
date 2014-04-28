@@ -86,7 +86,7 @@ typedef NS_ENUM(NSInteger, ODLDetailViewTableViewSections)
     {
         case ODLDetailViewTableViewSectionDevices:
         {
-            return @"";
+            return self.deviceLabViewModel.formattedDeviceCount;
             break;
         }
         case ODLDetailViewTableViewSectionAddress:
