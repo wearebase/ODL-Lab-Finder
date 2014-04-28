@@ -10,7 +10,7 @@
 
 @class ODLMasterViewModel;
 
-@interface ODLMasterViewController : UIViewController
+@interface ODLMasterViewController : UITableViewController
 
 @property (nonatomic, readonly) ODLMasterViewModel *viewModel;
 

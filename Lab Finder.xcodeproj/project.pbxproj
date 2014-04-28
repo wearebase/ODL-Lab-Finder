@@ -24,6 +24,8 @@
 		65334100190E5926005707F5 /* ODLMasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 653340FF190E5926005707F5 /* ODLMasterViewModel.m */; };
 		65334103190E5A72005707F5 /* ODLDeviceLabViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65334102190E5A72005707F5 /* ODLDeviceLabViewModel.m */; };
 		65334107190E6143005707F5 /* ODLNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65334106190E6143005707F5 /* ODLNetworkManager.m */; };
+		6533410D190E73F2005707F5 /* ODLDeviceLabTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6533410B190E73F2005707F5 /* ODLDeviceLabTableViewCell.m */; };
+		6533410E190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6533410C190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib */; };
 		71765A189E824DAEBEBAC94A /* libPods-Lab FinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */; };
 		D8BAC35C3AC74EE69CAEB4D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994388EA4664489AD1108D2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,9 @@
 		65334102190E5A72005707F5 /* ODLDeviceLabViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLDeviceLabViewModel.m; sourceTree = "<group>"; };
 		65334105190E6143005707F5 /* ODLNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLNetworkManager.h; sourceTree = "<group>"; };
 		65334106190E6143005707F5 /* ODLNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLNetworkManager.m; sourceTree = "<group>"; };
+		6533410A190E73F2005707F5 /* ODLDeviceLabTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLDeviceLabTableViewCell.h; sourceTree = "<group>"; };
+		6533410B190E73F2005707F5 /* ODLDeviceLabTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLDeviceLabTableViewCell.m; sourceTree = "<group>"; };
+		6533410C190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ODLDeviceLabTableViewCell.xib; sourceTree = "<group>"; };
 		BEC05017DDA34EA8AB17239D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lab FinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +139,7 @@
 		653340CC190E53D1005707F5 /* Lab Finder */ = {
 			isa = PBXGroup;
 			children = (
+				65334109190E73CC005707F5 /* Views */,
 				65334104190E6114005707F5 /* Helpers */,
 				653340F7190E53E3005707F5 /* View Controllers */,
 				653340F6190E53DC005707F5 /* View Models */,
@@ -198,8 +204,7 @@
 		653340F7190E53E3005707F5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				653340FB190E5690005707F5 /* ODLMasterViewController.h */,
-				653340FC190E5690005707F5 /* ODLMasterViewController.m */,
+				65334108190E73B6005707F5 /* Master View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -211,6 +216,25 @@
 				65334106190E6143005707F5 /* ODLNetworkManager.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		65334108190E73B6005707F5 /* Master View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				653340FB190E5690005707F5 /* ODLMasterViewController.h */,
+				653340FC190E5690005707F5 /* ODLMasterViewController.m */,
+			);
+			name = "Master View Controller";
+			sourceTree = "<group>";
+		};
+		65334109190E73CC005707F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6533410A190E73F2005707F5 /* ODLDeviceLabTableViewCell.h */,
+				6533410B190E73F2005707F5 /* ODLDeviceLabTableViewCell.m */,
+				6533410C190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +319,7 @@
 			files = (
 				653340D1190E53D1005707F5 /* InfoPlist.strings in Resources */,
 				653340D9190E53D1005707F5 /* Images.xcassets in Resources */,
+				6533410E190E73F2005707F5 /* ODLDeviceLabTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +408,7 @@
 				65334100190E5926005707F5 /* ODLMasterViewModel.m in Sources */,
 				65334107190E6143005707F5 /* ODLNetworkManager.m in Sources */,
 				653340FA190E5641005707F5 /* ODLDeviceLab.m in Sources */,
+				6533410D190E73F2005707F5 /* ODLDeviceLabTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
