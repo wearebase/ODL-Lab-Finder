@@ -24,6 +24,8 @@
     {
         _viewModel = [ODLMasterViewModel new];
         [_viewModel updateContent];
+        
+        self.title = NSLocalizedString(@"Open Device Labs", nil);
     }
     
     return self;
@@ -32,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView.tableFooterView = [UIView new];
     
     [[[_viewModel updatedContentSignal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x)
     {

@@ -17,6 +17,14 @@
     // Theming
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorFromHexString:@"009dfb"]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                           NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Medium"
+                                                                                                size:18]
+                                                           }];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.window.backgroundColor = [UIColor whiteColor];
