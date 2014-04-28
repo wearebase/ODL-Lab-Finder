@@ -20,6 +20,7 @@
 		653340EA190E53D1005707F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 653340E8190E53D1005707F5 /* InfoPlist.strings */; };
 		653340EC190E53D1005707F5 /* Lab_FinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653340EB190E53D1005707F5 /* Lab_FinderTests.m */; };
 		653340FA190E5641005707F5 /* ODLDeviceLab.m in Sources */ = {isa = PBXBuildFile; fileRef = 653340F9190E5641005707F5 /* ODLDeviceLab.m */; };
+		653340FD190E5690005707F5 /* ODLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653340FC190E5690005707F5 /* ODLMasterViewController.m */; };
 		71765A189E824DAEBEBAC94A /* libPods-Lab FinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */; };
 		D8BAC35C3AC74EE69CAEB4D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994388EA4664489AD1108D2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,8 @@
 		653340EB190E53D1005707F5 /* Lab_FinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab_FinderTests.m; sourceTree = "<group>"; };
 		653340F8190E5641005707F5 /* ODLDeviceLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLDeviceLab.h; sourceTree = "<group>"; };
 		653340F9190E5641005707F5 /* ODLDeviceLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLDeviceLab.m; sourceTree = "<group>"; };
+		653340FB190E5690005707F5 /* ODLMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODLMasterViewController.h; sourceTree = "<group>"; };
+		653340FC190E5690005707F5 /* ODLMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODLMasterViewController.m; sourceTree = "<group>"; };
 		BEC05017DDA34EA8AB17239D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FA4C6F7BE8564EC7BC627540 /* libPods-Lab FinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lab FinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +184,8 @@
 		653340F7190E53E3005707F5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				653340FB190E5690005707F5 /* ODLMasterViewController.h */,
+				653340FC190E5690005707F5 /* ODLMasterViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			files = (
 				653340D7190E53D1005707F5 /* ODLAppDelegate.m in Sources */,
 				653340D3190E53D1005707F5 /* main.m in Sources */,
+				653340FD190E5690005707F5 /* ODLMasterViewController.m in Sources */,
 				653340FA190E5641005707F5 /* ODLDeviceLab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
