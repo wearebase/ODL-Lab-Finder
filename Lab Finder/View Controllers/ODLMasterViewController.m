@@ -8,10 +8,11 @@
 
 #import "ODLMasterViewController.h"
 #import "ODLMasterViewModel.h"
-
+#import "ODLDetailViewController.h"
+#import "ODLDetailViewModel.h"
 #import <UIView+AutoLayout/UIView+AutoLayout.h>
 
-@interface ODLMasterViewController () <UITableViewDataSource>
+@interface ODLMasterViewController ()
 @property (weak, nonatomic) UITableView *tableView;
 @end
 
@@ -75,6 +76,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 67;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ODLDetailViewModel *detailViewModel = [[ODLDetailViewModel alloc] initWithDeviceLabViewModel:[self.viewModel deviceLabViewModelForIndexPath:indexPath]];
+    [self.navigationController pushViewController:[[ODLDetailViewController alloc] initWithViewModel:detailViewModel]
+                                         animated:YES];
 }
 
 #pragma mark - Private Methods

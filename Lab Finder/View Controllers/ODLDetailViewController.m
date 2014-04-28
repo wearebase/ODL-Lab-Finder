@@ -16,7 +16,7 @@
 
 @implementation ODLDetailViewController
 
-- (instancetype)initWithViewModel:(ODLDetailViewModel *)viewModel
+- (instancetype)initWithViewModel:(ODLDetailViewModel *)viewModel;
 {
     self = [super init];
     if (self)
@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (void)didReceiveMemoryWarning
