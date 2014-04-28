@@ -10,7 +10,7 @@
 
 @class ODLDeviceLabViewModel;
 
-@interface ODLMasterViewModel : RVMViewModel <UITableViewDataSource>
+@interface ODLMasterViewModel : RVMViewModel
 
 @property (nonatomic, readonly) RACSignal *updatedContentSignal;
 

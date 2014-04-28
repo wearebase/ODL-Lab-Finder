@@ -10,6 +10,9 @@
 
 @interface ODLDeviceLab : NSObject
 
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSDictionary *location;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 + (instancetype)deviceLabWithDictionary:(NSDictionary *)dictionary;
 

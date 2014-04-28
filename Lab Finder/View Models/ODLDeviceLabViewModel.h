@@ -8,6 +8,13 @@
 
 #import "RVMViewModel.h"
 
+@class ODLDeviceLab;
+
 @interface ODLDeviceLabViewModel : RVMViewModel
+
+- (instancetype)initWithModel:(ODLDeviceLab *)model;
+
+@property (nonatomic, readonly) NSString *titleFormattedName;
+@property (nonatomic, readonly) NSString *titleFormattedLocation;
 
 @end

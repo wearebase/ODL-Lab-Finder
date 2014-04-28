@@ -45,8 +45,45 @@
     @weakify(self);
     [[self fetchAllDeviceLabs] subscribeNext:^(id x) {
         @strongify(self);
-        self.data = x;
+        self.data = [[[x rac_sequence] map:^id(id value) {
+            return [[ODLDeviceLabViewModel alloc] initWithModel:value];
+        }] array];
     }];
+}
+
+- (NSInteger)numberOfSections
+{
+    return 1;
+}
+
+- (NSInteger)numberOfItemsInSection:(NSInteger)section
+{
+    return self.data.count;
+}
+
+- (NSString *)titleForSection:(NSInteger)section
+{
+    return nil;
+}
+
+- (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self deviceLabViewModelForIndexPath:indexPath].titleFormattedName;
+}
+
+- (NSString *)subtitleAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self deviceLabViewModelForIndexPath:indexPath].titleFormattedLocation;
+}
+
+- (NSInteger)ratingAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 3;
+}
+
+- (ODLDeviceLabViewModel *)deviceLabViewModelForIndexPath:(NSIndexPath *)indexPath
+{
+    return self.data[indexPath.row];
 }
 
 #pragma mark - Network

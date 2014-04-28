@@ -20,7 +20,6 @@
     self = [super init];
     if (self)
     {
-        NSLog(@"Hello");
         _viewModel = [ODLMasterViewModel new];
         [_viewModel updateContent];
     }

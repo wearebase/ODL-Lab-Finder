@@ -31,7 +31,8 @@
     self = [self init];
     if (self)
     {
-        
+        _name = dictionary[@"name"];
+        _location = dictionary[@"loc"];
     }
     
     return self;
