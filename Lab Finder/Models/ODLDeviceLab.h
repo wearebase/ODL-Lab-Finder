@@ -10,4 +10,6 @@
 
 @interface ODLDeviceLab : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
++ (instancetype)deviceLabWithDictionary:(NSDictionary *)dictionary;
 @end

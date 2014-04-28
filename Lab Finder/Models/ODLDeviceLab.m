@@ -10,4 +10,31 @@
 
 @implementation ODLDeviceLab
 
++ (instancetype)deviceLabWithDictionary:(NSDictionary *)dictionary
+{
+    return [[self alloc] initWithDictionary:dictionary];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [self init];
+    if (self)
+    {
+        
+    }
+    
+    return self;
+}
+
 @end

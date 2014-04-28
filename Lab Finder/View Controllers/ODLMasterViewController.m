@@ -7,6 +7,7 @@
 //
 
 #import "ODLMasterViewController.h"
+#import "ODLMasterViewModel.h"
 
 @interface ODLMasterViewController ()
 
@@ -14,12 +15,14 @@
 
 @implementation ODLMasterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self)
     {
-        // Custom initialization
+        NSLog(@"Hello");
+        _viewModel = [ODLMasterViewModel new];
+        [_viewModel updateContent];
     }
     
     return self;

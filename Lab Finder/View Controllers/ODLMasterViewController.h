@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ODLMasterViewModel;
+
 @interface ODLMasterViewController : UIViewController
+
+@property (nonatomic, readonly) ODLMasterViewModel *viewModel;
 
 @end
