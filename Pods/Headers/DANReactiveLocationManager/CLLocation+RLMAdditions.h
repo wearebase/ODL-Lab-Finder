@@ -1,0 +1,1 @@
+../../DANReactiveLocationManager/CLLocation+RLMAdditions.h
