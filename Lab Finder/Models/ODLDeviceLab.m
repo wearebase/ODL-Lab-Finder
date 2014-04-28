@@ -33,6 +33,7 @@
     {
         _name = dictionary[@"name"];
         _location = dictionary[@"loc"];
+        _numberOfDevices = dictionary[@"number_of_devices"];
     }
     
     return self;

@@ -32,6 +32,21 @@
         RAC(self, formattedAddress, @"") = [locationSignal map:^id(NSDictionary *location) {
             return [NSString stringWithFormat:@"%@,\n%@,\n%@,\n%@", location[@"street_adress"], location[@"city"], location[@"zip"], location[@"country"]];
         }];
+        
+        RAC(self, formattedDeviceCount, @"0 devices") = [RACObserve(self.model, numberOfDevices) map:^id(NSNumber *numberOfDevices) {
+            if ([numberOfDevices  isEqualToNumber:@0])
+            {
+                return @"0 devices";
+            }
+            else if ([numberOfDevices isEqualToNumber:@1])
+            {
+                return @"1 device";
+            }
+            else
+            {
+                return [[numberOfDevices stringValue] stringByAppendingString:@" devices"];
+            }
+        }];
     }
     
     return self;

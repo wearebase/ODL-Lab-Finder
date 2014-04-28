@@ -106,8 +106,8 @@
     }
     else
     {
-    cell.textLabel.text = [self.viewModel titleAtIndexPath:indexPath];
-    cell.detailTextLabel.text = [self.viewModel subtitleAtIndexPath:indexPath];
+        cell.textLabel.text = [self.viewModel titleAtIndexPath:indexPath];
+        cell.detailTextLabel.text = [self.viewModel subtitleAtIndexPath:indexPath];
     }
 }
 

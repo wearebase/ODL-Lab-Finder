@@ -17,4 +17,5 @@
 @property (nonatomic, readonly) NSString *titleFormattedName;
 @property (nonatomic, readonly) NSString *titleFormattedLocation;
 @property (nonatomic, readonly) NSString *formattedAddress;
+@property (nonatomic, readonly) NSString *formattedDeviceCount;
 @end

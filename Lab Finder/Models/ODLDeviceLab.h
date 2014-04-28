@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSDictionary *location;
+@property (nonatomic, readonly) NSNumber *numberOfDevices;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 + (instancetype)deviceLabWithDictionary:(NSDictionary *)dictionary;
