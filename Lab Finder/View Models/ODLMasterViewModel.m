@@ -76,11 +76,6 @@
     return [self deviceLabViewModelForIndexPath:indexPath].titleFormattedLocation;
 }
 
-- (NSInteger)ratingAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 3;
-}
-
 - (ODLDeviceLabViewModel *)deviceLabViewModelForIndexPath:(NSIndexPath *)indexPath
 {
     return self.data[indexPath.row];

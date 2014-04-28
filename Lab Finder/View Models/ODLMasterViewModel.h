@@ -53,13 +53,6 @@
 - (NSString *)subtitleAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
- *  @param indexPath The index path to return a rating for.
- *
- *  @return The rating of the device lab.
- */
-- (NSInteger)ratingAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
  *  @param indexPath The index path to return a view model for.
  *
  *  @return The device lab view model.
